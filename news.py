@@ -41,7 +41,7 @@ headers = {
   "X-NCP-APIGW-API-KEY-ID": "0a31i2ioet",
   "X-NCP-APIGW-API-KEY": "TkaVYGO9cpbunly7wLdpRDDxyAmIgkPT8uiqOEqx"
 }
-r = requests.get(f"https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query={address}", headers=headers)
+r = requests.get("https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query={address}", headers=headers)
 response = r.json()
 if response["status"] == "OK":
     if len(response["addresses"]) > 0:

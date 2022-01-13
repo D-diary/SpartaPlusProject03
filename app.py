@@ -36,7 +36,7 @@ def like_matjip():
         db.matjips.update_one({"title": title_receive, "address": address_receive}, {"$unset": {"liked": False}})
     return jsonify({'result': 'success'})
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5000, debug=True)
+    app.run('0.0.0.0', port=5050, debug=True)
 
 
 
